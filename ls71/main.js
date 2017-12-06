@@ -5,7 +5,7 @@ function Person(firstName, lastName, age) {
     this.email = 'admin';
 }
 
-var p1 = new Person('Haim', 'admin', 18);
+var p1 = new Person('Haim', 'admin ', 18);
 // var p1 = new Person('Haim', 'Moshe', 18);
 
 Person.prototype.validate = function() {
