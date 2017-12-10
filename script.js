@@ -15,7 +15,7 @@ Person.prototype.validate= function(){
 }
 
 //var p1 = new Person("meir", "ilson", 5);
-var p1 = new Person("admin", "ilson", 5);
+var p1 = new Person("                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ", "ilson", 5);
 
 function buildForm(obj, $form1) {
     const keys = Object.keys(obj);
@@ -42,4 +42,39 @@ buildForm(p1, $form1);
     catch(ex) {
         document.getElementById('error').innerHTML = ex;
     }
+});
+
+function Student (firstName, lastname, age, course) {
+    Person.call(this,firstName, lastname, age);
+    this.course = course;
+}
+
+var s1 = new Student("john bryce", "judy", 49, "c#");
+const $form2 = document.getElementById('form2');
+buildForm(s1, $form2);
+
+function add1() {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+          const randNum = Math.ceil(Math.random()*10);
+          if (randNum % 2 == 0) {
+            resolve('success ' + randNum);
+          }
+          else {
+            reject('error ' + randNum);
+          }
+        }, 1000); //2000
+      });
+  }
+
+  const btn = document.getElementById('btnPromise');
+  btn.addEventListener("click", function() {
+
+    add1()
+    .then(function(v) {
+        alert('promise: ' + v); 
+    })
+    .catch(function(error) {
+        alert('promise: ' + error); 
+    });
 });
