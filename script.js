@@ -1,3 +1,4 @@
+var memos = [];
 var d = new Date();
 var MemoObject = { date: d, time: d.getTime(), content: 'hello meir' };
 memos.push(MemoObject);
