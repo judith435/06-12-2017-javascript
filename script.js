@@ -1,4 +1,4 @@
-var MemoObject = { date: date(), time: date(), content: 'hello meir' };
+var MemoObject = { date: new Date(), time: getTime(), content: 'hello meir' };
 memos.push(MemoObject);
 
 
