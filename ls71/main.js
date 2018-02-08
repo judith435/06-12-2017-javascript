@@ -1,3 +1,8 @@
+var MemoObject = { date: memoDate, time: memoTime, content: memoContent };
+memos.push(MemoObject);
+
+
+
 function Person(firstName, lastName, age) {
     this.firstName = firstName;
     this.lastName = lastName;
